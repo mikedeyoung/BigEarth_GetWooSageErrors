@@ -1,5 +1,5 @@
 # GetWooSageErrors
-# main.py v1.0
+# main.py v1.0 (scrubbed)
 # mike@phonecompany.cloud
 
 import datetime
@@ -45,13 +45,13 @@ def main():
         FileName2 = "C:\Sage\Sage 300 ERP\Custom\macros\WooCommerceSync\Logs\Error\Log_Backup\ErrorLog.txt"
 
         # Connect to SMTP server
-        session = smtplib.SMTP(host='smtp.office365.com', port=587)
+        session = smtplib.SMTP(host='smtp.office536.com', port=785)
         print('Connected to SMTP server...')
         sleep(2)
         session.starttls()
         print('Started TLS...')
         sleep(2)
-        session.login('alerts@bigearthsupply.com', 'password')
+        session.login('alarms@bigearthsupply.com', 'password')
         print('Logged in...')
         sleep(2)
 
@@ -59,7 +59,7 @@ def main():
         msg = MIMEMultipart('alternative')
         email_body = html_report
         msg['Subject'] = 'Webstore Import Error - ' + str(datetime.datetime.today())[:10]
-        msg['From'] = 'alerts@bigearthsupply.com'
+        msg['From'] = 'alarms@bigearthsupply.com'
         msg['To'] = 'email1@nodomain.com'
         msg['CC'] = 'email2@nodomain.com'
         # Insert Message Body
