@@ -51,7 +51,7 @@ def main():
         session.starttls()
         print('Started TLS...')
         sleep(2)
-        session.login('alerts@bigearthsupply.com', 'y2=S4w6+d*TN')
+        session.login('alerts@bigearthsupply.com', 'password')
         print('Logged in...')
         sleep(2)
 
@@ -60,9 +60,8 @@ def main():
         email_body = html_report
         msg['Subject'] = 'Webstore Import Error - ' + str(datetime.datetime.today())[:10]
         msg['From'] = 'alerts@bigearthsupply.com'
-        msg['To'] = 'mike@phonecompany.cloud'
-        #msg['To'] = 'ellie@bigearthsupply.com, monica@bigearthsupply.com, taylor@bigearthsupply.com, mike@phonecompany.cloud'
-        #msg['CC'] = 'adam@bigearthsupply.com, sally@bigearthsupply.com'
+        msg['To'] = 'email1@nodomain.com'
+        msg['CC'] = 'email2@nodomain.com'
         # Insert Message Body
         msg.attach(MIMEText(email_body, 'html'))
 
